@@ -1,0 +1,1601 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C</title>
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E7D32',
+                        secondary: '#1565C0',
+                        accent: '#FF9800',
+                        dark: '#333333',
+                        light: '#F5F5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    height: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            }
+            .bg-gradient-secondary {
+                background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+            }
+        }
+    </style>
+    
+    <style>
+        /* Custom Styles */
+        .hero-slide {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .product-overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .language-dropdown {
+            position: relative;
+        }
+        
+        .language-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            min-width: 120px;
+            z-index: 10;
+        }
+        
+        .language-dropdown:hover .language-dropdown-content {
+            display: block;
+        }
+        
+        /* Animation for product cards */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/eb39a4545f415e94f01d18dec229454b~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788593278&amp;x-signature=UAre1YKkCHloz5gpt5oLl5IGckc%3D" alt="ZHONGXUN Logo" class="h-10 w-auto mr-3">
+                        <div>
+                            <span class="text-primary font-bold text-xl" data-lang="company-name">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C</span>
+                            <span class="block text-xs text-gray-500" data-lang="parent-company">广东中迅农科有限股份公司</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-primary hover:text-secondary transition-all-300 font-medium" data-lang="nav-home">首页</a>
+                    <a href="#about" class="text-primary hover:text-secondary transition-all-300 font-medium" data-lang="nav-about">关于我们</a>
+                    <a href="#products" class="text-primary hover:text-secondary transition-all-300 font-medium" data-lang="nav-products">产品中心</a>
+                    <a href="#contact" class="text-primary hover:text-secondary transition-all-300 font-medium" data-lang="nav-contact">联系我们</a>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-dropdown">
+                        <button class="flex items-center text-primary hover:text-secondary transition-all-300">
+                            <span id="current-language">ES</span>
+                            <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="language-dropdown-content bg-white shadow-lg rounded-md py-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="es">Español</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary hover:text-secondary focus:outline-none">
+                        <i class="fa fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-primary hover:text-secondary transition-all-300 font-medium py-2" data-lang="nav-home">首页</a>
+                    <a href="#about" class="text-primary hover:text-secondary transition-all-300 font-medium py-2" data-lang="nav-about">关于我们</a>
+                    <a href="#products" class="text-primary hover:text-secondary transition-all-300 font-medium py-2" data-lang="nav-products">产品中心</a>
+                    <a href="#contact" class="text-primary hover:text-secondary transition-all-300 font-medium py-2" data-lang="nav-contact">联系我们</a>
+                    
+                    <!-- Mobile Language Selector -->
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-500 mb-2" data-lang="select-language">选择语言:</p>
+                        <div class="flex space-x-3">
+                            <button class="px-3 py-1 bg-primary text-white rounded-md text-sm language-btn" data-lang="es">ES</button>
+                            <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md text-sm language-btn" data-lang="zh">中文</button>
+                            <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md text-sm language-btn" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen overflow-hidden">
+        <div class="hero-slider h-full">
+            <div class="hero-slide active" style="background-image: url('https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/930757741385744417~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592481&amp;x-signature=RUqi6DRTQXNVKGlbMionei1KqG4%3D');">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                    <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-shadow" data-lang="hero-title">创新农业解决方案</h1>
+                        <p class="text-xl text-white mb-8" data-lang="hero-subtitle">为秘鲁农业提供高效、环保的农药产品和技术支持</p>
+                        <a href="#products" class="bg-primary hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all-300 inline-flex items-center">
+                            <span data-lang="hero-button">了解产品</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background-image: url('https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/2271909314467594255~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592481&amp;x-signature=VFH0A%2BHHoniPybd6Scx%2BUP9B6p4%3D');">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                    <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-shadow" data-lang="hero-title-2">可持续农业发展</h1>
+                        <p class="text-xl text-white mb-8" data-lang="hero-subtitle-2">保护作物，提高产量，促进农业可持续发展</p>
+                        <a href="#about" class="bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all-300 inline-flex items-center">
+                            <span data-lang="hero-button-2">关于我们</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background-image: url('https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/930757483684036692~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592481&amp;x-signature=P1QxD2MtWcHCZ7UWPoFg7Rdjl6A%3D');">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                    <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-shadow" data-lang="hero-title-3">专业技术支持</h1>
+                        <p class="text-xl text-white mb-8" data-lang="hero-subtitle-3">拥有多年农业经验的专业团队，为您提供全方位技术支持</p>
+                        <a href="#contact" class="bg-accent hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all-300 inline-flex items-center">
+                            <span data-lang="hero-button-3">联系我们</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-3 z-20">
+            <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all-300 active" data-index="0"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all-300" data-index="1"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all-300" data-index="2"></button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-lang="about-title">关于我们</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <img src="https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/988341699363340300~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592481&amp;x-signature=PUcEXUoqTXCG%2BYdrzobDZMpVoBE%3D" alt="Peru Agriculture" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="text-2xl font-bold text-primary mb-4" data-lang="about-subtitle">公司简介</h3>
+                    <p class="text-gray-700 mb-6" data-lang="about-text-1">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C 是广东中迅农科有限股份公司在秘鲁设立的子公司，专注于为秘鲁农业提供高质量的农药产品和技术服务。</p>
+                    <p class="text-gray-700 mb-6" data-lang="about-text-2">我们致力于通过创新的农业解决方案，帮助秘鲁农民提高作物产量，改善农产品质量，同时保护环境和促进可持续农业发展。</p>
+                    
+                    <div class="bg-gray-100 p-6 rounded-lg mb-6">
+                        <h4 class="font-bold text-primary mb-3" data-lang="parent-company-title">母公司介绍</h4>
+                        <p class="text-gray-700" data-lang="parent-company-text">广东中迅农科股份有限公司成立于2002年，是一家专注于农药原药、制剂、中间体、药肥产品研发、生产、销售推广和技术服务于一体的高新技术企业。公司自有登记证超过650个，公司先后在广东、湖南、四川、江西、湖北、山东等地设立了8大生产基地。经过多年的发展，从公司规模、产品数量、解决方案到研发技术的产业化等方面已成为行业的领先企业;公司2023年销售额逾40亿，蝉联2024年CCPIA全国农药行业制剂销售排名第一。</p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-2"></i>
+                            <span class="text-gray-700" data-lang="about-feature-1">20年行业经验</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-2"></i>
+                            <span class="text-gray-700" data-lang="about-feature-2">专业技术团队</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-2"></i>
+                            <span class="text-gray-700" data-lang="about-feature-3">高质量产品</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-2"></i>
+                            <span class="text-gray-700" data-lang="about-feature-4">环保解决方案</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-lang="products-title">产品中心</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-lang="products-subtitle">我们提供全面的农药产品，包括除草剂、杀虫剂、杀菌剂和植物调节剂，满足不同作物的需求。</p>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Product Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="product-category-btn bg-primary text-white px-6 py-2 rounded-full font-medium transition-all-300" data-category="all">
+                    <span data-lang="all-products">全部产品</span>
+                </button>
+                <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300" data-category="herbicides">
+                    <span data-lang="herbicides">除草剂</span>
+                </button>
+                <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300" data-category="insecticides">
+                    <span data-lang="insecticides">杀虫剂</span>
+                </button>
+                <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300" data-category="fungicides">
+                    <span data-lang="fungicides">杀菌剂</span>
+                </button>
+                <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300" data-category="regulators">
+                    <span data-lang="plant-regulators">植物调节剂</span>
+                </button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Herbicide Products -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800">
+                    <div class="p-6 flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2" data-lang="herbicide-name-1">2,4-D</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-lang="herbicide-desc-1">选择性除草剂，用于防治禾本科作物田中的阔叶杂草。</p>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-primary font-bold" data-lang="category-herbicide">除草剂</span>
+                                <span class="text-sm text-gray-500">94-75-7</span>
+                            </div>
+                        </div>
+                        <button class="view-product-btn bg-primary text-white font-bold py-2 px-4 rounded-md transition-all-300 w-full text-center hover:bg-primary-dark" data-product="herbicide-1">
+                            <span data-lang="view-details">查看详情</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/e569304befa04b54aed6ca7298a574f1~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592466&amp;x-signature=%2BaJEoe8iCclWudKQ1I%2FsETY5n4Y%3D" alt="Butachlor Product" class="w-full h-full object-cover">
+                        <div class="product-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center">
+                            <button class="view-product-btn bg-white text-primary font-bold py-2 px-4 rounded-md transition-all-300" data-product="herbicide-2">
+                                <span data-lang="view-details">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-lang="herbicide-name-2">丁草胺</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang="herbicide-desc-2">酰胺类选择性内吸传导型除草剂，用于稻田防除一年生禾本科杂草。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold" data-lang="category-herbicide">除草剂</span>
+                            <span class="text-sm text-gray-500">23184-66-9</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/e569304befa04b54aed6ca7298a574f1~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592466&amp;x-signature=%2BaJEoe8iCclWudKQ1I%2FsETY5n4Y%3D" alt="Diquat Product" class="w-full h-full object-cover">
+                        <div class="product-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center">
+                            <button class="view-product-btn bg-white text-primary font-bold py-2 px-4 rounded-md transition-all-300" data-product="herbicide-3">
+                                <span data-lang="view-details">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-lang="herbicide-name-3">敌草快</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang="herbicide-desc-3">联吡啶盐类触杀型灭生性除草剂，用于免耕田和水稻催枯。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold" data-lang="category-herbicide">除草剂</span>
+                            <span class="text-sm text-gray-500">200克/升</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/e569304befa04b54aed6ca7298a574f1~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592466&amp;x-signature=%2BaJEoe8iCclWudKQ1I%2FsETY5n4Y%3D" alt="Glufosinate Product" class="w-full h-full object-cover">
+                        <div class="product-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center">
+                            <button class="view-product-btn bg-white text-primary font-bold py-2 px-4 rounded-md transition-all-300" data-product="herbicide-4">
+                                <span data-lang="view-details">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-lang="herbicide-name-4">草胺磷</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang="herbicide-desc-4">广谱触杀型灭生性除草剂，抑制植物氮代谢途径中的谷氨酰胺合成酶。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold" data-lang="category-herbicide">除草剂</span>
+                            <span class="text-sm text-gray-500">51276-47-2</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/e569304befa04b54aed6ca7298a574f1~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592466&amp;x-signature=%2BaJEoe8iCclWudKQ1I%2FsETY5n4Y%3D" alt="Glufosinate-P Product" class="w-full h-full object-cover">
+                        <div class="product-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center">
+                            <button class="view-product-btn bg-white text-primary font-bold py-2 px-4 rounded-md transition-all-300" data-product="herbicide-5">
+                                <span data-lang="view-details">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-lang="herbicide-name-5">精草胺磷</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang="herbicide-desc-5">草胺磷的光学活性异构体，具有更高的除草活性和安全性。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold" data-lang="category-herbicide">除草剂</span>
+                            <span class="text-sm text-gray-500">106860-10-4</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="fungicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/ecom-shop-material/jpeg_m_23095c5b8bcaabcf33955c358e88247f_sx_1403524_www1194-1194~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592481&amp;x-signature=qYgYMxQAapeP1CAzrAtdUOFEfM0%3D" alt="Epoxiconazole Product" class="w-full h-full object-cover">
+                        <div class="product-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center">
+                            <button class="view-product-btn bg-white text-primary font-bold py-2 px-4 rounded-md transition-all-300" data-product="fungicide-1">
+                                <span data-lang="view-details">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-lang="fungicide-name-1">环氧菌唑</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang="fungicide-desc-1">三唑类杀菌剂，用于防治多种作物的真菌病害，又称氟环唑。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-bold" data-lang="category-fungicide">杀菌剂</span>
+                            <span class="text-sm text-gray-500">135319-73-2</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="insecticides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/ecom-shop-material/png_m_efa30a713045fb157ede349d13b8cc3f_sx_140532_www800-800~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592466&amp;x-signature=dkdNK8u4xLKnm51T%2FTIbdWMowlk%3D" alt="Chlorantraniliprole Product" class="w-full h-full object-cover">
+                        <div class="product-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center">
+                            <button class="view-product-btn bg-white text-primary font-bold py-2 px-4 rounded-md transition-all-300" data-product="insecticide-1">
+                                <span data-lang="view-details">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-lang="insecticide-name-1">氯虫</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang="insecticide-desc-1">氯虫苯甲酰胺，新型邻甲酰氨基苯甲酰胺类杀虫剂，高效防治鳞翅目害虫。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-secondary font-bold" data-lang="category-insecticide">杀虫剂</span>
+                            <span class="text-sm text-gray-500">500克/升</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/e569304befa04b54aed6ca7298a574f1~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788592466&amp;x-signature=%2BaJEoe8iCclWudKQ1I%2FsETY5n4Y%3D" alt="Flumioxazin Product" class="w-full h-full object-cover">
+                        <div class="product-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center">
+                            <button class="view-product-btn bg-white text-primary font-bold py-2 px-4 rounded-md transition-all-300" data-product="herbicide-6">
+                                <span data-lang="view-details">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2" data-lang="herbicide-name-6">丙炔氟草胺</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang="herbicide-desc-6">噁二唑类除草剂，用于大豆、花生等作物田防除阔叶杂草和部分禾本科杂草。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold" data-lang="category-herbicide">除草剂</span>
+                            <span class="text-sm text-gray-500">103361-09-7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-lang="contact-title">联系我们</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-lang="contact-subtitle">如果您对我们的产品和服务有任何疑问，请随时与我们联系。</p>
+                <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-primary mb-6" data-lang="contact-info">联系信息</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary rounded-full p-3 mr-4">
+                                    <i class="fa fa-user text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1" data-lang="contact-person">联系人</h4>
+                                    <p class="text-gray-700">PAUL</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary rounded-full p-3 mr-4">
+                                    <i class="fa fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1" data-lang="contact-phone">电话</h4>
+                                    <p class="text-gray-700">+86 15038661146</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary rounded-full p-3 mr-4">
+                                    <i class="fa fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1" data-lang="contact-email">邮箱</h4>
+                                    <p class="text-gray-700">paul@zhxcn.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary rounded-full p-3 mr-4">
+                                    <i class="fa fa-building text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1" data-lang="contact-company">公司名称</h4>
+                                    <p class="text-gray-700">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary rounded-full p-3 mr-4">
+                                    <i class="fa fa-globe text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1" data-lang="contact-parent">母公司</h4>
+                                    <p class="text-gray-700">广东中迅农科有限股份公司</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-lg mb-4" data-lang="contact-social">关注我们</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-primary hover:bg-opacity-90 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all-300">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a href="#" class="bg-primary hover:bg-opacity-90 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all-300">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a href="#" class="bg-primary hover:bg-opacity-90 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all-300">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="bg-primary hover:bg-opacity-90 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all-300">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-primary mb-6" data-lang="contact-form-title">发送消息</h3>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2" data-lang="form-name">姓名</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required="">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2" data-lang="form-email">邮箱</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required="">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-medium mb-2" data-lang="form-subject">主题</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required="">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2" data-lang="form-message">消息</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required=""></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all-300">
+                                    <span data-lang="form-submit">发送消息</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/eb39a4545f415e94f01d18dec229454b~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&amp;x-expires=1788593278&amp;x-signature=UAre1YKkCHloz5gpt5oLl5IGckc%3D" alt="ZHONGXUN Logo" class="h-10 w-auto mr-3">
+                        <span class="text-xl font-bold">ZHONGXUN PERU</span>
+                    </div>
+                    <p class="text-gray-400 mb-6" data-lang="footer-about">我们致力于为秘鲁农业提供高质量的农药产品和技术服务，促进农业可持续发展。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-lang="footer-links">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-home">首页</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-about-us">关于我们</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-products">产品中心</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-contact">联系我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-privacy">隐私政策</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Product Categories -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-lang="footer-categories">产品分类</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-herbicides">除草剂</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-insecticides">杀虫剂</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-fungicides">杀菌剂</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-regulators">植物调节剂</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300" data-lang="footer-all-products">全部产品</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-lang="footer-contact-info">联系信息</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-user text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">PAUL</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">+86 15038661146</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">paul@zhxcn.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400" data-lang="footer-hours">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400" data-lang="footer-copyright">© 2025 ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="modal-title" class="text-2xl font-bold text-primary"></h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                        <i class="fa fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img id="modal-image" src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/138cbf6538704862b46bd0749791bbd1~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=20260309155218C9EE48BB25A9DBE54CDD&amp;rrcfp=03245832&amp;x-expires=1773647542&amp;x-signature=AoTvpo4DNIpff6yipEcH5hprjNg%3D" alt="Product Image" class="w-full h-auto rounded-lg">
+                    </div>
+                    
+                    <div>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-2" data-lang="modal-category"></h4>
+                            <p id="modal-category" class="text-gray-600"></p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-2" data-lang="modal-description">描述</h4>
+                            <p id="modal-description" class="text-gray-600">广谱除草剂，用于防治棉花、水稻、甘蔗、果树和观赏植物等多种作物中的一年生杂草。</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-2" data-lang="modal-specifications"></h4>
+                            <ul id="modal-specifications" class="list-disc list-inside text-gray-600 space-y-1"></ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-2" data-lang="modal-usage"></h4>
+                            <p id="modal-usage" class="text-gray-600"></p>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="#contact" class="bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-6 rounded-md transition-all-300 inline-flex items-center" id="close-modal-btn">
+                                <span data-lang="modal-contact">联系我们</span>
+                                <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-opacity-90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all-300 opacity-0 invisible">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Language Data
+        const translations = {
+            es: {
+                // Navigation
+                'company-name': 'ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C',
+                'parent-company': '广东中迅农科有限股份公司',
+                'nav-home': 'Inicio',
+                'nav-about': 'Sobre Nosotros',
+                'nav-products': 'Productos',
+                'nav-contact': 'Contacto',
+                'select-language': 'Seleccionar idioma:',
+                
+                // Hero Section
+                'hero-title': 'Soluciones Agrícolas Innovadoras',
+                'hero-subtitle': 'Proporcionamos productos fitosanitarios y apoyo técnico eficientes y ecológicos para la agricultura peruana',
+                'hero-button': 'Conocer Productos',
+                'hero-title-2': 'Desarrollo Agrícola Sostenible',
+                'hero-subtitle-2': 'Protegemos cultivos, aumentamos rendimientos y promovemos el desarrollo agrícola sostenible',
+                'hero-button-2': 'Sobre Nosotros',
+                'hero-title-3': 'Soporte Técnico Profesional',
+                'hero-subtitle-3': 'Contamos con un equipo profesional con多年 de experiencia agrícola para brindarle apoyo técnico integral',
+                'hero-button-3': 'Contáctenos',
+                
+                // About Section
+                'about-title': 'Sobre Nosotros',
+                'about-subtitle': 'Nuestra Empresa',
+                'about-text-1': 'ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C es una subsidiaria de Guangdong Zhongxun Agricultural Science Co., Ltd. en Perú, dedicada a proporcionar productos fitosanitarios de alta calidad y servicios técnicos para la agricultura peruana.',
+                'about-text-2': 'Nos comprometemos a ayudar a los agricultores peruanos a aumentar la producción de cultivos, mejorar la calidad de los productos agrícolas y al mismo tiempo proteger el medio ambiente y promover el desarrollo agrícola sostenible mediante soluciones agrícolas innovadoras.',
+                'parent-company-title': 'Acerca de la Empresa Matriz',
+                'parent-company-text': 'Guangdong Zhongxun Agricultural Science Co., Ltd. es una empresa líder de producción de pesticidas en China, con avanzadas capacidades de investigación y desarrollo y tecnología de producción, cuyos productos se venden en numerosos países y regiones en todo el mundo.',
+                'about-feature-1': '20 años de experiencia',
+                'about-feature-2': 'Equipo técnico profesional',
+                'about-feature-3': 'Productos de alta calidad',
+                'about-feature-4': 'Soluciones ecológicas',
+                
+                // Products Section
+                'products-title': 'Productos',
+                'products-subtitle': 'Ofrecemos una amplia gama de productos fitosanitarios, incluyendo herbicidas, insecticidas, fungicidas y reguladores de crecimiento vegetal, para satisfacer las necesidades de diferentes cultivos.',
+                'all-products': 'Todos los Productos',
+                'herbicides': 'Herbicidas',
+                'insecticides': 'Insecticidas',
+                'fungicides': 'Fungicidas',
+                'plant-regulators': 'Reguladores Vegetales',
+                'view-details': 'Ver Detalles',
+                'category-herbicide': 'Herbicida',
+                'category-insecticide': 'Insecticida',
+                'category-fungicide': 'Fungicida',
+                'category-regulator': 'Regulador Vegetal',
+                
+                // Herbicide Products
+                'herbicide-name-1': 'Haloxifop-etil',
+                'herbicide-desc-1': 'Para el control de malezas gramíneas en多种 cultivos.',
+                'herbicide-name-2': 'Prometryn',
+                'herbicide-desc-2': 'Herbicida de amplio espectro para el control de多种 malezas anuales.',
+                
+                // Insecticide Products
+                'insecticide-name-1': 'Deltametrina',
+                'insecticide-desc-1': 'Insecticida de alta eficacia para el control de多种 plagas de orden Lepidóptera.',
+                'insecticide-name-2': 'Emamectina benzoato',
+                'insecticide-desc-2': 'Insecticida de alta eficacia y baja toxicidad para el control de多种 plagas.',
+                
+                // Fungicide Products
+                'fungicide-name-1': 'Carbendazim',
+                'fungicide-desc-1': 'Fungicida de amplio espectro para el control de多种 enfermedades fúngicas.',
+                'fungicide-name-2': 'Zhongshengmycin',
+                'fungicide-desc-2': 'Fungicida biológico para el control de enfermedades bacterianas.',
+                
+                // Plant Regulator Products
+                'regulator-name-1': 'Etileno',
+                'regulator-desc-1': 'Regulador de crecimiento vegetal para promover la maduración de frutos.',
+                'regulator-name-2': 'Giberelina + Ácido indolacético + Brassinoide',
+                'regulator-desc-2': 'Regulador de crecimiento vegetal compuesto para promover el crecimiento de plantas.',
+                
+                // Contact Section
+                'contact-title': 'Contacto',
+                'contact-subtitle': 'Si tiene alguna pregunta sobre nuestros productos y servicios, no dude en contactarnos.',
+                'contact-info': 'Información de Contacto',
+                'contact-person': 'Persona de Contacto',
+                'contact-phone': 'Teléfono',
+                'contact-email': 'Correo Electrónico',
+                'contact-company': 'Nombre de la Empresa',
+                'contact-parent': 'Empresa Matriz',
+                'contact-social': 'Síganos',
+                'contact-form-title': 'Enviar Mensaje',
+                'form-name': 'Nombre',
+                'form-email': 'Correo Electrónico',
+                'form-subject': 'Asunto',
+                'form-message': 'Mensaje',
+                'form-submit': 'Enviar Mensaje',
+                
+                // Footer
+                'footer-about': 'Nos dedicamos a proporcionar productos fitosanitarios de alta calidad y servicios técnicos para la agricultura peruana, promoviendo el desarrollo agrícola sostenible.',
+                'footer-links': 'Enlaces Rápidos',
+                'footer-home': 'Inicio',
+                'footer-about-us': 'Sobre Nosotros',
+                'footer-products': 'Productos',
+                'footer-contact': 'Contacto',
+                'footer-privacy': 'Política de Privacidad',
+                'footer-categories': 'Categorías de Productos',
+                'footer-herbicides': 'Herbicidas',
+                'footer-insecticides': 'Insecticidas',
+                'footer-fungicides': 'Fungicidas',
+                'footer-regulators': 'Reguladores Vegetales',
+                'footer-all-products': 'Todos los Productos',
+                'footer-contact-info': 'Información de Contacto',
+                'footer-hours': 'Lunes a Viernes: 9:00 - 18:00',
+                'footer-copyright': '© 2025 ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C. Todos los derechos reservados.',
+                
+                // Product Modal
+                'modal-category': 'Categoría',
+                'modal-description': 'Descripción',
+                'modal-specifications': 'Especificaciones',
+                'modal-usage': 'Modo de Uso',
+                'modal-contact': 'Contáctenos'
+            },
+            zh: {
+                // Navigation
+                'company-name': '中迅农业科技秘鲁有限公司',
+                'parent-company': '广东中迅农科有限股份公司',
+                'nav-home': '首页',
+                'nav-about': '关于我们',
+                'nav-products': '产品中心',
+                'nav-contact': '联系我们',
+                'select-language': '选择语言:',
+                
+                // Hero Section
+                'hero-title': '创新农业解决方案',
+                'hero-subtitle': '为秘鲁农业提供高效、环保的农药产品和技术支持',
+                'hero-button': '了解产品',
+                'hero-title-2': '可持续农业发展',
+                'hero-subtitle-2': '保护作物，提高产量，促进农业可持续发展',
+                'hero-button-2': '关于我们',
+                'hero-title-3': '专业技术支持',
+                'hero-subtitle-3': '拥有多年农业经验的专业团队，为您提供全方位技术支持',
+                'hero-button-3': '联系我们',
+                
+                // About Section
+                'about-title': '关于我们',
+                'about-subtitle': '公司简介',
+                'about-text-1': '中迅农业科技秘鲁有限公司是广东中迅农科有限股份公司在秘鲁设立的子公司，专注于为秘鲁农业提供高质量的农药产品和技术服务。',
+                'about-text-2': '我们致力于通过创新的农业解决方案，帮助秘鲁农民提高作物产量，改善农产品质量，同时保护环境和促进可持续农业发展。',
+                'parent-company-title': '母公司介绍',
+                'parent-company-text': '广东中迅农科有限股份公司是中国领先的农药生产企业，拥有先进的研发能力和生产技术，产品畅销全球多个国家和地区。',
+                'about-feature-1': '20年行业经验',
+                'about-feature-2': '专业技术团队',
+                'about-feature-3': '高质量产品',
+                'about-feature-4': '环保解决方案',
+                
+                // Products Section
+                'products-title': '产品中心',
+                'products-subtitle': '我们提供全面的农药产品，包括除草剂、杀虫剂、杀菌剂和植物调节剂，满足不同作物的需求。',
+                'all-products': '全部产品',
+                'herbicides': '除草剂',
+                'insecticides': '杀虫剂',
+                'fungicides': '杀菌剂',
+                'plant-regulators': '植物调节剂',
+                'view-details': '查看详情',
+                'category-herbicide': '除草剂',
+                'category-insecticide': '杀虫剂',
+                'category-fungicide': '杀菌剂',
+                'category-regulator': '植物调节剂',
+                
+                // Herbicide Products
+                'herbicide-name-1': '高效氟吡甲禾灵',
+                'herbicide-desc-1': '用于防治禾本科杂草，适用于多种作物田。',
+                'herbicide-name-2': '扑草净',
+                'herbicide-desc-2': '广谱除草剂，用于防治多种一年生杂草。',
+                
+                // Insecticide Products
+                'insecticide-name-1': '溴氰菊酯',
+                'insecticide-desc-1': '高效杀虫剂，用于防治多种鳞翅目害虫。',
+                'insecticide-name-2': '甲氨基阿维菌素苯甲酸盐',
+                'insecticide-desc-2': '高效低毒杀虫剂，用于防治多种害虫。',
+                
+                // Fungicide Products
+                'fungicide-name-1': '多菌灵',
+                'fungicide-desc-1': '广谱杀菌剂，用于防治多种真菌病害。',
+                'fungicide-name-2': '中生菌素',
+                'fungicide-desc-2': '生物杀菌剂，用于防治细菌性病害。',
+                
+                // Plant Regulator Products
+                'regulator-name-1': '乙烯利',
+                'regulator-desc-1': '植物生长调节剂，促进果实成熟。',
+                'regulator-name-2': '赤·吲乙·芸苔',
+                'regulator-desc-2': '复合型植物生长调节剂，促进植物生长。',
+                
+                // Contact Section
+                'contact-title': '联系我们',
+                'contact-subtitle': '如果您对我们的产品和服务有任何疑问，请随时与我们联系。',
+                'contact-info': '联系信息',
+                'contact-person': '联系人',
+                'contact-phone': '电话',
+                'contact-email': '邮箱',
+                'contact-company': '公司名称',
+                'contact-parent': '母公司',
+                'contact-social': '关注我们',
+                'contact-form-title': '发送消息',
+                'form-name': '姓名',
+                'form-email': '邮箱',
+                'form-subject': '主题',
+                'form-message': '消息',
+                'form-submit': '发送消息',
+                
+                // Footer
+                'footer-about': '我们致力于为秘鲁农业提供高质量的农药产品和技术服务，促进农业可持续发展。',
+                'footer-links': '快速链接',
+                'footer-home': '首页',
+                'footer-about-us': '关于我们',
+                'footer-products': '产品中心',
+                'footer-contact': '联系我们',
+                'footer-privacy': '隐私政策',
+                'footer-categories': '产品分类',
+                'footer-herbicides': '除草剂',
+                'footer-insecticides': '杀虫剂',
+                'footer-fungicides': '杀菌剂',
+                'footer-regulators': '植物调节剂',
+                'footer-all-products': '全部产品',
+                'footer-contact-info': '联系信息',
+                'footer-hours': '周一至周五: 9:00 - 18:00',
+                'footer-copyright': '© 2025 中迅农业科技秘鲁有限公司 保留所有权利。',
+                
+                // Product Modal
+                'modal-category': '类别',
+                'modal-description': '描述',
+                'modal-specifications': '规格',
+                'modal-usage': '使用方法',
+                'modal-contact': '联系我们'
+            },
+            en: {
+                // Navigation
+                'company-name': 'ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C',
+                'parent-company': 'Guangdong Zhongxun Agricultural Science Co., Ltd.',
+                'nav-home': 'Home',
+                'nav-about': 'About Us',
+                'nav-products': 'Products',
+                'nav-contact': 'Contact',
+                'select-language': 'Select language:',
+                
+                // Hero Section
+                'hero-title': 'Innovative Agricultural Solutions',
+                'hero-subtitle': 'Providing efficient and eco-friendly pesticide products and technical support for Peruvian agriculture',
+                'hero-button': 'Learn About Products',
+                'hero-title-2': 'Sustainable Agricultural Development',
+                'hero-subtitle-2': 'Protecting crops, increasing yields, and promoting sustainable agricultural development',
+                'hero-button-2': 'About Us',
+                'hero-title-3': 'Professional Technical Support',
+                'hero-subtitle-3': 'With a professional team with many years of agricultural experience, providing you with comprehensive technical support',
+                'hero-button-3': 'Contact Us',
+                
+                // About Section
+                'about-title': 'About Us',
+                'about-subtitle': 'Company Profile',
+                'about-text-1': 'ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C is a subsidiary of Guangdong Zhongxun Agricultural Science Co., Ltd. in Peru, dedicated to providing high-quality pesticide products and technical services for Peruvian agriculture.',
+                'about-text-2': 'We are committed to helping Peruvian farmers increase crop yields, improve agricultural product quality, while protecting the environment and promoting sustainable agricultural development through innovative agricultural solutions.',
+                'parent-company-title': 'About the Parent Company',
+                'parent-company-text': 'Guangdong Zhongxun Agricultural Science Co., Ltd. is a leading pesticide production enterprise in China, with advanced R&D capabilities and production technology, whose products are sold in many countries and regions around the world.',
+                'about-feature-1': '20 years of experience',
+                'about-feature-2': 'Professional technical team',
+                'about-feature-3': 'High-quality products',
+                'about-feature-4': 'Eco-friendly solutions',
+                
+                // Products Section
+                'products-title': 'Products',
+                'products-subtitle': 'We provide a comprehensive range of pesticide products, including herbicides, insecticides, fungicides, and plant growth regulators, to meet the needs of different crops.',
+                'all-products': 'All Products',
+                'herbicides': 'Herbicides',
+                'insecticides': 'Insecticides',
+                'fungicides': 'Fungicides',
+                'plant-regulators': 'Plant Regulators',
+                'view-details': 'View Details',
+                'category-herbicide': 'Herbicide',
+                'category-insecticide': 'Insecticide',
+                'category-fungicide': 'Fungicide',
+                'category-regulator': 'Plant Regulator',
+                
+                // Herbicide Products
+                'herbicide-name-1': 'Haloxyfop-methyl',
+                'herbicide-desc-1': 'For controlling grassy weeds in various crop fields.',
+                'herbicide-name-2': 'Prometryn',
+                'herbicide-desc-2': 'Broad-spectrum herbicide for controlling various annual weeds.',
+                
+                // Insecticide Products
+                'insecticide-name-1': 'Deltamethrin',
+                'insecticide-desc-1': 'Highly effective insecticide for controlling various lepidopteran pests.',
+                'insecticide-name-2': 'Emamectin benzoate',
+                'insecticide-desc-2': 'Highly effective and low-toxicity insecticide for controlling various pests.',
+                
+                // Fungicide Products
+                'fungicide-name-1': 'Carbendazim',
+                'fungicide-desc-1': 'Broad-spectrum fungicide for controlling various fungal diseases.',
+                'fungicide-name-2': 'Zhongshengmycin',
+                'fungicide-desc-2': 'Biological fungicide for controlling bacterial diseases.',
+                
+                // Plant Regulator Products
+                'regulator-name-1': 'Ethephon',
+                'regulator-desc-1': 'Plant growth regulator that promotes fruit ripening.',
+                'regulator-name-2': 'Gibberellic Acid + Indoleacetic Acid + Brassinolide',
+                'regulator-desc-2': 'Compound plant growth regulator that promotes plant growth.',
+                
+                // Contact Section
+                'contact-title': 'Contact Us',
+                'contact-subtitle': 'If you have any questions about our products and services, please feel free to contact us.',
+                'contact-info': 'Contact Information',
+                'contact-person': 'Contact Person',
+                'contact-phone': 'Phone',
+                'contact-email': 'Email',
+                'contact-company': 'Company Name',
+                'contact-parent': 'Parent Company',
+                'contact-social': 'Follow Us',
+                'contact-form-title': 'Send Message',
+                'form-name': 'Name',
+                'form-email': 'Email',
+                'form-subject': 'Subject',
+                'form-message': 'Message',
+                'form-submit': 'Send Message',
+                
+                // Footer
+                'footer-about': 'We are committed to providing high-quality pesticide products and technical services for Peruvian agriculture, promoting sustainable agricultural development.',
+                'footer-links': 'Quick Links',
+                'footer-home': 'Home',
+                'footer-about-us': 'About Us',
+                'footer-products': 'Products',
+                'footer-contact': 'Contact',
+                'footer-privacy': 'Privacy Policy',
+                'footer-categories': 'Product Categories',
+                'footer-herbicides': 'Herbicides',
+                'footer-insecticides': 'Insecticides',
+                'footer-fungicides': 'Fungicides',
+                'footer-regulators': 'Plant Regulators',
+                'footer-all-products': 'All Products',
+                'footer-contact-info': 'Contact Information',
+                'footer-hours': 'Monday to Friday: 9:00 - 18:00',
+                'footer-copyright': '© 2025 ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C. All rights reserved.',
+                
+                // Product Modal
+                'modal-category': 'Category',
+                'modal-description': 'Description',
+                'modal-specifications': 'Specifications',
+                'modal-usage': 'Usage Method',
+                'modal-contact': 'Contact Us'
+            }
+        };
+        
+        // Product Details Data
+        const productDetails = {
+            'herbicide-1': {
+                title: {
+                    es: 'Haloxifop-etil',
+                    zh: '高效氟吡甲禾灵',
+                    en: 'Haloxyfop-methyl'
+                },
+                image: 'https://p11-doubao-search-sign.byteimg.com/labis/78637478e1388d71be960befa94875eb~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592466&x-signature=F11JMiH%2F7gkmy8GuBuTq2WgHLN8%3D',
+                category: {
+                    es: 'Herbicida',
+                    zh: '除草剂',
+                    en: 'Herbicide'
+                },
+                description: {
+                    es: 'Herbicida selectivo para el control de malezas gramíneas en多种 cultivos, incluyendo soja, algodón, arroz, frutales y hortalizas.',
+                    zh: '选择性除草剂，用于防治多种作物田中的禾本科杂草，包括大豆、棉花、水稻、果树和蔬菜。',
+                    en: 'Selective herbicide for controlling grassy weeds in various crops, including soybeans, cotton, rice, fruits, and vegetables.'
+                },
+                specifications: {
+                    es: ['Contenido activo: 108 g/l', 'Formulación: Emulsión concentrada (EC)', 'Tipo: Post-emergencia', 'Sistema de acción: Herbicida de síntesis acética'],
+                    zh: ['有效成分：108克/升', '剂型：乳油(EC)', '类型：苗后除草剂', '作用系统：乙酰合成酶抑制剂'],
+                    en: ['Active ingredient: 108 g/l', 'Formulation: Emulsifiable concentrate (EC)', 'Type: Post-emergence', 'Action system: Acetyl synthesis inhibitor']
+                },
+                usage: {
+                    es: 'Aplicar en etapa de hoja de 2-4 de las malezas. La dosis recomendada varía según el tipo de cultivo y la densidad de las malezas. Consultar la etiqueta del producto para instrucciones específicas.',
+                    zh: '在杂草2-4叶期施药。推荐剂量根据作物类型和杂草密度而变化。请查阅产品标签获取具体使用说明。',
+                    en: 'Apply at the 2-4 leaf stage of weeds. The recommended dosage varies according to the crop type and weed density. Consult the product label for specific instructions.'
+                }
+            },
+            'herbicide-2': {
+                title: {
+                    es: 'Prometryn',
+                    zh: '扑草净',
+                    en: 'Prometryn'
+                },
+                image: 'https://p3-doubao-search-sign.byteimg.com/pgc-image/e569304befa04b54aed6ca7298a574f1~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592466&x-signature=%2BaJEoe8iCclWudKQ1I%2FsETY5n4Y%3D',
+                category: {
+                    es: 'Herbicida',
+                    zh: '除草剂',
+                    en: 'Herbicide'
+                },
+                description: {
+                    es: 'Herbicida de amplio espectro para el control de多种 malezas anuales en cultivos como algodón, arroz, caña de azúcar, frutales y ornamentales.',
+                    zh: '广谱除草剂，用于防治棉花、水稻、甘蔗、果树和观赏植物等多种作物中的一年生杂草。',
+                    en: 'Broad-spectrum herbicide for controlling various annual weeds in crops such as cotton, rice, sugarcane, fruits, and ornamentals.'
+                },
+                specifications: {
+                    es: ['Contenido activo: 50%', 'Formulación: Polvo soluble (SP)', 'Tipo: Pre-emergencia y post-emergencia temprana', 'Sistema de acción: Inhibidor de fotosíntesis'],
+                    zh: ['有效成分：50%', '剂型：可溶粉剂(SP)', '类型：苗前和早期苗后除草剂', '作用系统：光合作用抑制剂'],
+                    en: ['Active ingredient: 50%', 'Formulation: Soluble powder (SP)', 'Type: Pre-emergence and early post-emergence', 'Action system: Photosynthesis inhibitor']
+                },
+                usage: {
+                    es: 'Aplicar antes o poco después de la emergencia de las malezas. La dosis recomendada es de 1-2 kg/ha, según el tipo de cultivo y las condiciones del suelo.',
+                    zh: '在杂草出苗前或出苗后不久施药。推荐剂量为1-2公斤/公顷，根据作物类型和土壤条件调整。',
+                    en: 'Apply before or shortly after weed emergence. The recommended dosage is 1-2 kg/ha, depending on the crop type and soil conditions.'
+                }
+            },
+            'insecticide-1': {
+                title: {
+                    es: 'Deltametrina',
+                    zh: '溴氰菊酯',
+                    en: 'Deltamethrin'
+                },
+                image: 'https://p26-doubao-search-sign.byteimg.com/ecom-shop-material/png_m_efa30a713045fb157ede349d13b8cc3f_sx_140532_www800-800~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592466&x-signature=dkdNK8u4xLKnm51T%2FTIbdWMowlk%3D',
+                category: {
+                    es: 'Insecticida',
+                    zh: '杀虫剂',
+                    en: 'Insecticide'
+                },
+                description: {
+                    es: 'Insecticida piretroide de contacto y ingestión, altamente eficaz contra多种 plagas de orden Lepidóptera, Coleoptera y Hemiptera en cultivos como maíz, algodón, frutales y hortalizas.',
+                    zh: '触杀和胃毒型拟除虫菊酯类杀虫剂，对玉米、棉花、果树和蔬菜等作物中的多种鳞翅目、鞘翅目和半翅目害虫高效。',
+                    en: 'Contact and stomach pyrethroid insecticide, highly effective against various pests of Lepidoptera, Coleoptera, and Hemiptera orders in crops such as corn, cotton, fruits, and vegetables.'
+                },
+                specifications: {
+                    es: ['Contenido activo: 25 g/l', 'Formulación: Emulsión concentrada (EC)', 'Sistema de acción: Neurotóxico, altera el sistema nervioso', 'Persistencia: Media'],
+                    zh: ['有效成分：25克/升', '剂型：乳油(EC)', '作用系统：神经毒剂，干扰神经系统', '持效期：中等'],
+                    en: ['Active ingredient: 25 g/l', 'Formulation: Emulsifiable concentrate (EC)', 'Action system: Neurotoxic, disrupts the nervous system', 'Persistence: Medium']
+                },
+                usage: {
+                    es: 'Aplicar cuando las plagas estén en estadio joven y su población esté por debajo del umbral de daño económico. La dosis recomendada es de 0.2-0.5 l/ha, según el tipo de plaga y cultivo.',
+                    zh: '在害虫处于幼龄阶段且种群数量低于经济损害阈值时施药。推荐剂量为0.2-0.5升/公顷，根据害虫类型和作物调整。',
+                    en: 'Apply when pests are in the young stage and their population is below the economic damage threshold. The recommended dosage is 0.2-0.5 l/ha, depending on the pest type and crop.'
+                }
+            },
+            'insecticide-2': {
+                title: {
+                    es: 'Emamectina benzoato',
+                    zh: '甲氨基阿维菌素苯甲酸盐',
+                    en: 'Emamectin Benzoate'
+                },
+                image: 'https://p26-doubao-search-sign.byteimg.com/labis/93a0436b4af27240e2b72dcec31953b9~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592466&x-signature=8tCF5voycFTjDlLnTJdWEjPn76w%3D',
+                category: {
+                    es: 'Insecticida',
+                    zh: '杀虫剂',
+                    en: 'Insecticide'
+                },
+                description: {
+                    es: 'Insecticida macrólido semisintético, derivado de la abamectina, altamente eficaz contra多种 plagas de Lepidóptera en cultivos como maíz, algodón, frutales y hortalizas. Tiene bajo impacto en organismos no objetivo.',
+                    zh: '半合成大环内酯类杀虫剂，阿维菌素的衍生物，对玉米、棉花、果树和蔬菜等作物中的多种鳞翅目害虫高效。对非目标生物影响小。',
+                    en: 'Semi-synthetic macrolide insecticide, derived from abamectin, highly effective against various Lepidoptera pests in crops such as corn, cotton, fruits, and vegetables. Has low impact on non-target organisms.'
+                },
+                specifications: {
+                    es: ['Contenido activo: 2%', 'Formulación: Concentrado de suspensión (SC)', 'Sistema de acción: Neurotóxico, estimula la liberación de glutamato', 'Toxicidad: Baja para mamíferos'],
+                    zh: ['有效成分：2%', '剂型：悬浮剂(SC)', '作用系统：神经毒剂，刺激谷氨酸释放', '毒性：对哺乳动物低毒'],
+                    en: ['Active ingredient: 2%', 'Formulation: Suspension concentrate (SC)', 'Action system: Neurotoxic, stimulates glutamate release', 'Toxicity: Low to mammals']
+                },
+                usage: {
+                    es: 'Aplicar en la etapa de larva joven de las plagas. La dosis recomendada es de 0.2-0.4 l/ha. Para un mejor control, mezclar con un adyuvante de extensión.',
+                    zh: '在害虫幼虫幼龄阶段施药。推荐剂量为0.2-0.4升/公顷。为获得更好的防治效果，可与扩展助剂混合使用。',
+                    en: 'Apply at the young larval stage of pests. The recommended dosage is 0.2-0.4 l/ha. For better control, mix with a spreading adjuvant.'
+                }
+            },
+            'fungicide-1': {
+                title: {
+                    es: 'Carbendazim',
+                    zh: '多菌灵',
+                    en: 'Carbendazim'
+                },
+                image: 'https://p26-doubao-search-sign.byteimg.com/labis/0041157e01674f409066a1b3004526cd~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=23YvTS71xWPbU8uLx9OSOc2jNHM%3D',
+                category: {
+                    es: 'Fungicida',
+                    zh: '杀菌剂',
+                    en: 'Fungicide'
+                },
+                description: {
+                    es: 'Fungicida sistémico de amplio espectro, perteneciente a la familia de los benzimidazoles, eficaz contra多种 enfermedades fúngicas causadas por hongos Ascomycetes, Basidiomycetes y Deuteromycetes en una amplia variedad de cultivos.',
+                    zh: '内吸性广谱杀菌剂，属于苯并咪唑类，对多种作物中由子囊菌、担子菌和半知菌引起的真菌病害有效。',
+                    en: 'Systemic broad-spectrum fungicide, belonging to the benzimidazole family, effective against various fungal diseases caused by Ascomycetes, Basidiomycetes, and Deuteromycetes fungi in a wide variety of crops.'
+                },
+                specifications: {
+                    es: ['Contenido activo: 50%', 'Formulación: Polvo soluble (SP)', 'Sistema de acción: Inhibidor de la síntesis de tubulina', 'Movilidad: Sistémico, se transloca hacia arriba'],
+                    zh: ['有效成分：50%', '剂型：可溶粉剂(SP)', '作用系统：微管蛋白合成抑制剂', '移动性：内吸性，向上传导'],
+                    en: ['Active ingredient: 50%', 'Formulation: Soluble powder (SP)', 'Action system: Tubulin synthesis inhibitor', 'Mobility: Systemic, translocates upward']
+                },
+                usage: {
+                    es: 'Aplicar preventivamente o al inicio de los síntomas de la enfermedad. La dosis recomendada varía según el cultivo y la enfermedad, generalmente entre 0.5-1.0 kg/ha. Puede aplicarse por aspersión foliar o tratamiento de semillas.',
+                    zh: '预防性施药或在病害症状初现时施药。推荐剂量根据作物和病害类型而异，一般为0.5-1.0公斤/公顷。可通过叶面喷雾或种子处理方式施用。',
+                    en: 'Apply preventively or at the onset of disease symptoms. The recommended dosage varies according to the crop and disease, generally between 0.5-1.0 kg/ha. It can be applied by foliar spray or seed treatment.'
+                }
+            },
+            'fungicide-2': {
+                title: {
+                    es: 'Zhongshengmycin',
+                    zh: '中生菌素',
+                    en: 'Zhongshengmycin'
+                },
+                image: 'https://p26-doubao-search-sign.byteimg.com/ecom-shop-material/jpeg_m_23095c5b8bcaabcf33955c358e88247f_sx_1403524_www1194-1194~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=qYgYMxQAapeP1CAzrAtdUOFEfM0%3D',
+                category: {
+                    es: 'Fungicida',
+                    zh: '杀菌剂',
+                    en: 'Fungicide'
+                },
+                description: {
+                    es: 'Fungicida biológico producido por Streptomyces lavendulae, especialmente eficaz contra enfermedades bacterianas como la mancha angular bacteriana, la marchitez bacterial y la cancrosis bacterial en cultivos como pepino, tomate, arroz y cítricos.',
+                    zh: '由淡紫灰链霉菌产生的生物杀菌剂，对黄瓜、番茄、水稻和柑橘等作物中的细菌性角斑病、青枯病和溃疡病等细菌性病害特别有效。',
+                    en: 'Biological fungicide produced by Streptomyces lavendulae, especially effective against bacterial diseases such as angular leaf spot, bacterial wilt, and bacterial canker in crops such as cucumber, tomato, rice, and citrus.'
+                },
+                specifications: {
+                    es: ['Contenido activo: 3%', 'Formulación: Polvo soluble (SP)', 'Sistema de acción: Inhibe la síntesis de proteínas en bacterias', 'Toxicidad: Muy baja para mamíferos y organismos beneficiosos'],
+                    zh: ['有效成分：3%', '剂型：可溶粉剂(SP)', '作用系统：抑制细菌蛋白质合成', '毒性：对哺乳动物和有益生物毒性极低'],
+                    en: ['Active ingredient: 3%', 'Formulation: Soluble powder (SP)', 'Action system: Inhibits protein synthesis in bacteria', 'Toxicity: Very low to mammals and beneficial organisms']
+                },
+                usage: {
+                    es: 'Aplicar preventivamente o al inicio de los síntomas. La dosis recomendada es de 0.3-0.5 kg/ha en 500-750 l de agua. Para un mejor control, repetir la aplicación cada 7-10 días según las condiciones climáticas y la severidad de la enfermedad.',
+                    zh: '预防性施药或在症状初现时施药。推荐剂量为0.3-0.5公斤/公顷，兑水500-750升。为获得更好的防治效果，根据气候条件和病害严重程度，每7-10天重复施药一次。',
+                    en: 'Apply preventively or at the onset of symptoms. The recommended dosage is 0.3-0.5 kg/ha in 500-750 l of water. For better control, repeat application every 7-10 days depending on weather conditions and disease severity.'
+                }
+            },
+            'regulator-1': {
+                title: {
+                    es: 'Etileno',
+                    zh: '乙烯利',
+                    en: 'Ethephon'
+                },
+                image: 'https://p11-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/9e8b0a57b5fd4ebc8a86a9b74808c841~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=0AT14Xp0wtajkWg2nXkrCLUbNvo%3D',
+                category: {
+                    es: 'Regulador Vegetal',
+                    zh: '植物调节剂',
+                    en: 'Plant Regulator'
+                },
+                description: {
+                    es: 'Regulador de crecimiento vegetal que libera etileno en presencia de agua y calor, utilizado para promover la maduración de frutos, la caída de hojas, la floración y el crecimiento lateral en多种 cultivos.',
+                    zh: '植物生长调节剂，在水和热量存在下释放乙烯，用于促进多种作物的果实成熟、落叶、开花和侧枝生长。',
+                    en: 'Plant growth regulator that releases ethylene in the presence of water and heat, used to promote fruit ripening, leaf abscission, flowering, and lateral growth in various crops.'
+                },
+                specifications: {
+                    es: ['Contenido activo: 40%', 'Formulación: Solución acuosa concentrada', 'Sistema de acción: Libera etileno, que es una hormona vegetal natural', 'Aplicación: Foliar o directa sobre frutos'],
+                    zh: ['有效成分：40%', '剂型：浓水剂', '作用系统：释放乙烯，一种天然植物激素', '施用方式：叶面喷雾或直接处理果实'],
+                    en: ['Active ingredient: 40%', 'Formulation: Concentrated aqueous solution', 'Action system: Releases ethylene, which is a natural plant hormone', 'Application: Foliar or direct on fruits']
+                },
+                usage: {
+                    es: 'Aplicar cuando los frutos estén en etapa de maduración fisiológica. La dosis varía según el cultivo y el objetivo, generalmente entre 0.5-2.0 l/ha. Para la maduración de frutos cosechados, sumergir los frutos en una solución diluida durante 1-2 minutos.',
+                    zh: '在果实处于生理成熟期时施药。剂量根据作物和目标而异，一般为0.5-2.0升/公顷。对于已收获果实的催熟，将果实浸入稀释溶液中1-2分钟。',
+                    en: 'Apply when fruits are at the physiological maturity stage. The dosage varies according to the crop and objective, generally between 0.5-2.0 l/ha. For ripening harvested fruits, immerse the fruits in a diluted solution for 1-2 minutes.'
+                }
+            },
+            'regulator-2': {
+                title: {
+                    es: 'Giberelina + Ácido indolacético + Brassinoide',
+                    zh: '赤·吲乙·芸苔',
+                    en: 'Gibberellic Acid + IAA + Brassinolide'
+                },
+                image: 'https://p11-doubao-search-sign.byteimg.com/tos-cn-i-6w9my0ksvp/196b29647ad74b2bb700ac135deeb0bf~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=93OCr66rDky3d0A4oYYX4U5FX5o%3D',
+                category: {
+                    es: 'Regulador Vegetal',
+                    zh: '植物调节剂',
+                    en: 'Plant Regulator'
+                },
+                description: {
+                    es: 'Regulador de crecimiento vegetal compuesto que combina tres hormonas vegetales: giberelina, ácido indolacético y brassinoide. Promueve el crecimiento de raíces, tallos y hojas, aumenta la resistencia a estreses ambientales y mejora la calidad de los frutos.',
+                    zh: '复合型植物生长调节剂，结合了三种植物激素：赤霉素、吲哚乙酸和芸苔素内酯。促进根、茎、叶生长，提高环境胁迫 resistance，改善果实品质。',
+                    en: 'Compound plant growth regulator that combines three plant hormones: gibberellic acid, indoleacetic acid, and brassinolide. Promotes root, stem, and leaf growth, increases resistance to environmental stresses, and improves fruit quality.'
+                },
+                specifications: {
+                    es: ['Contenido total: 0.136%', 'Formulación: Polvo soluble (SP)', 'Componentes: Giberelina 0.135%, Ácido indolacético 0.00052%, Brassinoide 0.00031%', 'Sistema de acción: Multiples efectos fisiológicos'],
+                    zh: ['总有效成分：0.136%', '剂型：可溶粉剂(SP)', '成分：赤霉素0.135%，吲哚乙酸0.00052%，芸苔素内酯0.00031%', '作用系统：多重生理效应'],
+                    en: ['Total content: 0.136%', 'Formulation: Soluble powder (SP)', 'Components: Gibberellic acid 0.135%, Indoleacetic acid 0.00052%, Brassinolide 0.00031%', 'Action system: Multiple physiological effects']
+                },
+                usage: {
+                    es: 'Aplicar en etapas clave del desarrollo del cultivo, como emergencia, inicio de la floración y formación de frutos. La dosis recomendada es de 10-20 g/ha en 300-500 l de agua. Para un mejor resultado, mezclar con fertilizantes foliares.',
+                    zh: '在作物发育的关键阶段施药，如出苗期、花期初期和果实形成期。推荐剂量为10-20克/公顷，兑水300-500升。为获得更好的效果，可与叶面肥混合使用。',
+                    en: 'Apply at key stages of crop development, such as emergence, early flowering, and fruit formation. The recommended dosage is 10-20 g/ha in 300-500 l of water. For better results, mix with foliar fertilizers.'
+                }
+            }
+        };
+        
+        // Current Language
+        let currentLang = 'es';
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS Animation Library
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Set initial language
+            setLanguage(currentLang);
+            
+            // Initialize hero slider
+            initHeroSlider();
+            
+            // Initialize product category filter
+            initProductFilter();
+            
+            // Initialize product modal
+            initProductModal();
+            
+            // Initialize mobile menu
+            initMobileMenu();
+            
+            // Initialize back to top button
+            initBackToTop();
+            
+            // Initialize contact form
+            initContactForm();
+            
+            // Initialize language switcher
+            initLanguageSwitcher();
+        });
+        
+        // Set Language
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            
+            // Update current language display
+            document.getElementById('current-language').textContent = lang.toUpperCase();
+            
+            // Update all elements with data-lang attribute
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update language buttons
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-primary', 'text-white');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+        
+        // Initialize Hero Slider
+        function initHeroSlider() {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+            let slideInterval;
+            
+            // Show slide function
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Remove active class from all dots
+                dots.forEach(dot => {
+                    dot.classList.remove('active', 'bg-opacity-100');
+                    dot.classList.add('bg-opacity-50');
+                });
+                
+                // Show current slide and activate corresponding dot
+                slides[index].classList.add('active');
+                dots[index].classList.add('active', 'bg-opacity-100');
+                dots[index].classList.remove('bg-opacity-50');
+                
+                // Update current slide index
+                currentSlide = index;
+            }
+            
+            // Next slide function
+            function nextSlide() {
+                let next = currentSlide + 1;
+                if (next >= slides.length) {
+                    next = 0;
+                }
+                showSlide(next);
+            }
+            
+            // Start slide show
+            function startSlideshow() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            // Stop slide show
+            function stopSlideshow() {
+                clearInterval(slideInterval);
+            }
+            
+            // Add click event to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopSlideshow();
+                    showSlide(index);
+                    startSlideshow();
+                });
+            });
+            
+            // Start the slideshow
+            startSlideshow();
+        }
+        
+        // Initialize Product Filter
+        function initProductFilter() {
+            const categoryBtns = document.querySelectorAll('.product-category-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    categoryBtns.forEach(b => {
+                        b.classList.remove('bg-primary', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    
+                    // Add active class to clicked button
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('bg-primary', 'text-white');
+                    
+                    // Get selected category
+                    const category = btn.getAttribute('data-category');
+                    
+                    // Show/hide products based on category
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+        
+        // Initialize Product Modal
+        function initProductModal() {
+            const modal = document.getElementById('product-modal');
+            const closeModal = document.getElementById('close-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const viewProductBtns = document.querySelectorAll('.view-product-btn');
+            
+            // Open modal function
+            function openModal(productId) {
+                const product = productDetails[productId];
+                if (!product) return;
+                
+                // Update modal content
+                document.getElementById('modal-title').textContent = product.title[currentLang];
+                document.getElementById('modal-image').src = product.image;
+                document.getElementById('modal-category').textContent = product.category[currentLang];
+                document.getElementById('modal-description').textContent = product.description[currentLang];
+                
+                // Update specifications list
+                const specsList = document.getElementById('modal-specifications');
+                specsList.innerHTML = '';
+                product.specifications[currentLang].forEach(spec => {
+                    const li = document.createElement('li');
+                    li.textContent = spec;
+                    specsList.appendChild(li);
+                });
+                
+                // Update usage
+                document.getElementById('modal-usage').textContent = product.usage[currentLang];
+                
+                // Show modal
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Close modal function
+            function closeModalFunc() {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Add click event to view product buttons
+            viewProductBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const productId = btn.getAttribute('data-product');
+                    openModal(productId);
+                });
+            });
+            
+            // Add click event to close button
+            closeModal.addEventListener('click', closeModalFunc);
+            closeModalBtn.addEventListener('click', closeModalFunc);
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModalFunc();
+                }
+            });
+        }
+        
+        // Initialize Mobile Menu
+        function initMobileMenu() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+        
+        // Initialize Back to Top Button
+        function initBackToTop() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            // Scroll to top when button is clicked
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // Initialize Contact Form
+        function initContactForm() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Validate form
+                if (!name || !email || !subject || !message) {
+                    alert(translations[currentLang]['form-error'] || 'Please fill in all fields');
+                    return;
+                }
+                
+                // Simulate form submission
+                alert(translations[currentLang]['form-success'] || 'Message sent successfully! We will contact you soon.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+        
+        // Initialize Language Switcher
+        function initLanguageSwitcher() {
+            // Desktop language switcher
+            document.querySelectorAll('.language-dropdown-content a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = link.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
+            });
+            
+            // Mobile language switcher
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
+            });
+        }
+    </script>
+
+</body></html>
