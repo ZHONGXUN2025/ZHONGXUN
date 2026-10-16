@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="keywords" content="除草剂,农药,2,4-D,Butachlor,Herbicida,农药出口">
-<meta name="description" content="专业除草剂供应商，提供2,4-D、Butachlor等除草剂产品，品质保障">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C</title>
+    <title>ZHONGXUN PERU | Herbicidas, Insecticidas y Fungicidas para la Agricultura Peruana</title>
+    <meta name="keywords" content="herbicida Peru, insecticida, fungicida, glufosinato, 2,4-D, diquat, epoxiconazol, productos fitosanitarios, agroquímicos Perú, ZHONGXUN PERU">
+    <meta name="description" content="ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C. ofrece herbicidas, insecticidas y fungicidas de calidad para la agricultura peruana: glufosinato, 2,4-D, diquat, epoxiconazol y más, con respaldo técnico.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZHONGXUN PERU | Soluciones Fitosanitarias para la Agricultura Peruana">
+    <meta property="og:description" content="Herbicidas, insecticidas y fungicidas de calidad con respaldo técnico para la agricultura peruana.">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="ZHONGXUN PERU">
+    <meta property="og:url" content="https://zhongxun2025.github.io/ZHONGXUN/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ZHONGXUN2025/ZHONGXUN/main/%E7%BD%91%E7%AB%99%E5%AE%A3%E4%BC%A0%20HERBOCOL%201L.jpg">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232E7D32'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EZ%3C/text%3E%3C/svg%3E">
     <!-- Tailwind CSS v3 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -93,7 +102,8 @@
             z-index: 10;
         }
         
-        .language-dropdown:hover .language-dropdown-content {
+        .language-dropdown:hover .language-dropdown-content,
+        .language-dropdown-content.open {
             display: block;
         }
         
@@ -115,11 +125,11 @@
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="#" class="flex items-center">
-                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/eb39a4545f415e94f01d18dec229454b~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788593278&x-signature=UAre1YKkCHloz5gpt5oLl5IGckc%3D" alt="ZHONGXUN Logo" class="h-10 w-auto mr-3">
+                    <a href="#home" class="flex items-center">
+                        <span class="bg-primary text-white font-bold text-xl flex items-center justify-center h-10 w-10 rounded-lg mr-3">Z</span>
                         <div>
-                            <span class="text-primary font-bold text-xl">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C</span>
-                            <span class="block text-xs text-gray-500">中迅农科秘鲁股份有限公司</span>
+                            <span class="text-primary font-bold text-lg leading-tight">ZHONGXUN PERU</span>
+                            <span class="block text-xs text-gray-500 lang-text" data-lang-es="Agricultural Science S.A.C." data-lang-zh="中迅农科秘鲁股份有限公司">Agricultural Science S.A.C.</span>
                         </div>
                     </a>
                 </div>
@@ -133,11 +143,11 @@
                     
                     <!-- Language Selector (仅保留西语/中文) -->
                     <div class="language-dropdown">
-                        <button class="flex items-center text-primary hover:text-secondary transition-all-300">
+                        <button id="lang-toggle" type="button" aria-haspopup="true" class="flex items-center text-primary hover:text-secondary transition-all-300">
                             <span id="current-language">ES</span>
                             <i class="fa fa-chevron-down ml-1 text-xs"></i>
                         </button>
-                        <div class="language-dropdown-content bg-white shadow-lg rounded-md py-2">
+                        <div id="lang-menu" class="language-dropdown-content bg-white shadow-lg rounded-md py-2">
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 lang-btn" data-lang="es">西班牙语</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 lang-btn" data-lang="zh">中文</a>
                         </div>
@@ -176,7 +186,7 @@
     <!-- Hero Section -->
     <section id="home" class="relative h-screen overflow-hidden">
         <div class="hero-slider h-full">
-            <div class="hero-slide active" style="background-image: url('https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/930757741385744417~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=RUqi6DRTQXNVKGlbMionei1KqG4%3D');">
+            <div class="hero-slide active" style="background-image: linear-gradient(rgba(20,60,30,0.55),rgba(20,60,30,0.55)), url('%E7%BD%91%E7%AB%99%E5%AE%A3%E4%BC%A0%20HERBOCOL%201L.jpg');">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div class="container mx-auto px-4 h-full flex items-center relative z-10">
                     <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
@@ -190,7 +200,7 @@
                 </div>
             </div>
             
-            <div class="hero-slide" style="background-image: url('https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/2271909314467594255~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=VFH0A%2BHHoniPybd6Scx%2BUP9B6p4%3D');">
+            <div class="hero-slide" style="background: linear-gradient(135deg,#1B5E20 0%,#2E7D32 55%,#1565C0 130%);">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div class="container mx-auto px-4 h-full flex items-center relative z-10">
                     <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
@@ -204,7 +214,7 @@
                 </div>
             </div>
             
-            <div class="hero-slide" style="background-image: url('https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/930757483684036692~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=P1QxD2MtWcHCZ7UWPoFg7Rdjl6A%3D');">
+            <div class="hero-slide" style="background: linear-gradient(135deg,#0D47A1 0%,#1565C0 60%,#2E7D32 140%);">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div class="container mx-auto px-4 h-full flex items-center relative z-10">
                     <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
@@ -237,17 +247,17 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right" data-aos-duration="1000">
-                    <img src="https://p11-doubao-search-sign.byteimg.com/tos-cn-i-be4g95zd3a/988341699363340300~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788592481&x-signature=PUcEXUoqTXCG%2BYdrzobDZMpVoBE%3D" alt="Agricultura Perú" class="rounded-lg shadow-xl w-full h-auto">
+                    <img src="%E7%BD%91%E7%AB%99%E5%AE%A3%E4%BC%A0%20HERBOCOL%201L.jpg" alt="Cultivo de arroz y producto Herbocol 2,4-D en Perú" loading="lazy" class="rounded-lg shadow-xl w-full h-auto">
                 </div>
                 
                 <div data-aos="fade-left" data-aos-duration="1000">
                     <h3 class="text-2xl font-bold text-primary mb-4 lang-text" data-lang-es="Nuestra Empresa" data-lang-zh="我们的公司">Nuestra Empresa</h3>
-                    <p class="text-gray-700 mb-6 lang-text" data-lang-es="ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C es una subsidiaria de Guangdong Zhongxun Agricultural Science Co., Ltd., especializada en ofrecer productos fitosanitarios de alta calidad y servicios técnicos para la agricultura peruana." data-lang-zh="中迅农科秘鲁股份有限公司是广东中迅农科股份有限公司的子公司，专注于为秘鲁农业提供高品质的植保产品和技术服务。">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C es una subsidiaria de Guangdong Zhongxun Agricultural Science Co., Ltd., especializada en ofrecer productos fitosanitarios de alta calidad y servicios técnicos para la agricultura peruana.</p>
+                    <p class="text-gray-700 mb-6 lang-text" data-lang-es="ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C. es la filial en Perú de Guangdong Zhongxun Agricultural Science Co., Ltd., especializada en ofrecer productos fitosanitarios de alta calidad y servicios técnicos para la agricultura peruana." data-lang-zh="中迅农科秘鲁股份有限公司是广东中迅农科股份有限公司的秘鲁子公司，专注于为秘鲁农业提供高品质的植保产品和技术服务。">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C. es la filial en Perú de Guangdong Zhongxun Agricultural Science Co., Ltd., especializada en ofrecer productos fitosanitarios de alta calidad y servicios técnicos para la agricultura peruana.</p>
                     <p class="text-gray-700 mb-6 lang-text" data-lang-es="Nuestro compromiso es ayudar a los agricultores peruanos a incrementar la producción, mejorar la calidad de los cultivos y proteger el medio ambiente a través de soluciones innovadoras y sostenibles." data-lang-zh="我们的使命是通过创新、可持续的解决方案，帮助秘鲁农民提高产量、改善作物品质并保护环境。">Nuestro compromiso es ayudar a los agricultores peruanos a incrementar la producción, mejorar la calidad de los cultivos y proteger el medio ambiente a través de soluciones innovadoras y sostenibles.</p>
                     
                     <div class="bg-gray-100 p-6 rounded-lg mb-6">
                         <h4 class="font-bold text-primary mb-3 lang-text" data-lang-es="Empresa Matriz" data-lang-zh="总公司">Empresa Matriz</h4>
-                        <p class="text-gray-700 lang-text" data-lang-es="Guangdong Zhongxun Agricultural Science Co., Ltd., fundada en 2002, es una empresa líder en la industria de pesticidas en China, con 8 plantas de producción y más de 650 registros propios. Es referente en I+D, fabricación y comercialización de soluciones agrícolas de alta eficiencia." data-lang-zh="广东中迅农科股份有限公司成立于2002年，是中国农药行业的领军企业，拥有8大生产基地和650+自主登记产品，是高效农业解决方案研发、生产、销售的标杆企业。">Guangdong Zhongxun Agricultural Science Co., Ltd., fundada en 2002, es una empresa líder en la industria de pesticidas en China, con 8 plantas de producción y más de 650 registros propios. Es referente en I+D, fabricación y comercialización de soluciones agrícolas de alta eficiencia.</p>
+                        <p class="text-gray-700 lang-text" data-lang-es="Guangdong Zhongxun Agricultural Science Co., Ltd., fundada en 2002, es una empresa líder en la industria de plaguicidas en China, con 8 plantas de producción y más de 650 registros propios. Es referente en I+D, fabricación y comercialización de soluciones agrícolas de alta eficiencia." data-lang-zh="广东中迅农科股份有限公司成立于2002年，是中国农药行业的领军企业，拥有8大生产基地和650+自主登记产品，是高效农业解决方案研发、生产、销售的标杆企业。">Guangdong Zhongxun Agricultural Science Co., Ltd., fundada en 2002, es una empresa líder en la industria de plaguicidas en China, con 8 plantas de producción y más de 650 registros propios. Es referente en I+D, fabricación y comercialización de soluciones agrícolas de alta eficiencia.</p>
                     </div>
                     
                     <div class="flex flex-wrap gap-4">
@@ -278,7 +288,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 lang-text" data-lang-es="Nuestros Productos" data-lang-zh="我们的产品">Nuestros Productos</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto lang-text" data-lang-es="Ofrecemos una amplia gama de productos fitosanitarios: herbicidas, insecticidas, fungicidas y reguladores de crecimiento vegetal, adaptados a las necesidades de cada cultivo." data-lang-zh="我们提供全系列植保产品：除草剂、杀虫剂、杀菌剂、植物生长调节剂，满足不同作物的需求。">Ofrecemos una amplia gama de productos fitosanitarios: herbicidas, insecticidas, fungicidas y reguladores de crecimiento vegetal, adaptados a las necesidades de cada cultivo.</p>
+                <p class="text-gray-600 max-w-2xl mx-auto lang-text" data-lang-es="Ofrecemos una amplia gama de productos fitosanitarios: herbicidas, insecticidas y fungicidas, adaptados a las necesidades de cada cultivo." data-lang-zh="我们提供全系列植保产品：除草剂、杀虫剂、杀菌剂，满足不同作物的需求。">Ofrecemos una amplia gama de productos fitosanitarios: herbicidas, insecticidas y fungicidas, adaptados a las necesidades de cada cultivo.</p>
                 <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
             </div>
             
@@ -288,7 +298,6 @@
                 <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300 lang-text" data-lang-es="Herbicidas" data-lang-zh="除草剂" data-category="herbicides">Herbicidas</button>
                 <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300 lang-text" data-lang-es="Insecticidas" data-lang-zh="杀虫剂" data-category="insecticides">Insecticidas</button>
                 <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300 lang-text" data-lang-es="Fungicidas" data-lang-zh="杀菌剂" data-category="fungicides">Fungicidas</button>
-                <button class="product-category-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition-all-300 lang-text" data-lang-es="Reguladores Vegetales" data-lang-zh="植物生长调节剂" data-category="regulators">Reguladores Vegetales</button>
             </div>
             
             <!-- Products Grid -->
@@ -298,15 +307,16 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800">
                     <div class="p-6 flex flex-col justify-between h-full">
                                                  <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/%E7%BD%91%E7%AB%99%E5%AE%A3%E4%BC%A0%20HERBOCOL%201L.jpg?raw=true" 
-        alt="L-Glufosinato" 
+      <img
+        src="%E7%BD%91%E7%AB%99%E5%AE%A3%E4%BC%A0%20HERBOCOL%201L.jpg"
+        alt="Herbocol 2,4-D, herbicida selectivo"
+        loading="lazy"
         class="w-full h-48 object-cover rounded-md"
       >
     </div>
                         <div>
-                            <h3 class="font-bold text-lg mb-2">2,4-D</h3>
-                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Herbicida selectivo para el control de malezas de hoja ancha en cultivos de gramíneas." data-lang-zh="阔莎杂草克星 激素型内吸除草见效快。">Especialista en malezas de hoja ancha y ciperáceas; herbicida sistémico hormonal de acción rápida..</p>
+                            <h3 class="font-bold text-lg mb-2">2,4-D (Herbocol)</h3>
+                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Herbicida sistémico hormonal para el control de malezas de hoja ancha y ciperáceas en cultivos de gramíneas." data-lang-zh="激素型内吸选择性除草剂，防除禾本科作物田中的阔叶杂草与莎草。">Herbicida sistémico hormonal para el control de malezas de hoja ancha y ciperáceas en cultivos de gramíneas.</p>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-primary font-bold lang-text" data-lang-es="Herbicida" data-lang-zh="除草剂">Herbicida</span>
                                 <span class="text-sm text-gray-500">720g/L</span>
@@ -322,15 +332,13 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="p-6 flex flex-col justify-between h-full">
                                                  <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/L-glofosinate.jpg?raw=true" 
-        alt="Butachlor" 
-        class="w-full h-48 object-cover rounded-md"
-      >
+      <div class="w-full h-48 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+        <span class="text-gray-400 text-sm lang-text" data-lang-es="Imagen del producto próximamente" data-lang-zh="产品图待补充">Imagen del producto próximamente</span>
+      </div>
     </div>
                         <div>
                             <h3 class="font-bold text-lg mb-2">Butachlor</h3>
-                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Herbicida selectivo para arroz, control de malezas gramíneas anuales." data-lang-zh="水稻专用选择性除草剂，防除一年生禾本科杂草。">Herbicida selectivo para arroz, control de malezas gramíneas anuales.</p>
+                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Herbicida selectivo de pre-emergencia para arroz, control de malezas gramíneas anuales." data-lang-zh="水稻专用苗前选择性除草剂，防除一年生禾本科杂草。">Herbicida selectivo de pre-emergencia para arroz, control de malezas gramíneas anuales.</p>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-primary font-bold lang-text" data-lang-es="Herbicida" data-lang-zh="除草剂">Herbicida</span>
                                 <span class="text-sm text-gray-500">600g/L</span>
@@ -346,9 +354,10 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="p-6 flex flex-col justify-between h-full">
                                                  <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/DIKILL1L.jpg?raw=true" 
-        alt="Diquat" 
+      <img
+        src="DIKILL1L.jpg"
+        alt="Dikill, herbicida de contacto Diquat"
+        loading="lazy"
         class="w-full h-48 object-cover rounded-md"
       >
     </div>
@@ -370,15 +379,16 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="p-6 flex flex-col justify-between h-full">
                                                  <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/FUEGO%201L.jpg?raw=true" 
-        alt="Glufosinate" 
+      <img
+        src="FUEGO%201L.jpg"
+        alt="Fuego, glufosinato no selectivo"
+        loading="lazy"
         class="w-full h-48 object-cover rounded-md"
       >
     </div>
                         <div>
-                            <h3 class="font-bold text-lg mb-2">Glufosinato</h3>
-                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Herbicida no selectivo de amplio espectro, inhibe la glutamina sintetasa." data-lang-zh="安全除草  不伤根系。">Control seguro de malezas, no daña las raíces del cultivo.</p>
+                            <h3 class="font-bold text-lg mb-2">Glufosinato (Fuego)</h3>
+                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Herbicida no selectivo de amplio espectro; se inactiva al contacto con el suelo y no daña las raíces del cultivo." data-lang-zh="广谱非选择性除草剂，遇土钝化，不伤作物根系，安全除草。">Herbicida no selectivo de amplio espectro; se inactiva al contacto con el suelo y no daña las raíces del cultivo.</p>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-primary font-bold lang-text" data-lang-es="Herbicida" data-lang-zh="除草剂">Herbicida</span>
                                 <span class="text-sm text-gray-500">200g/L</span>
@@ -394,15 +404,16 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="p-6 flex flex-col justify-between h-full">
                           <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/L-glo.jpg?raw=true" 
-        alt="L-Glufosinato" 
+      <img
+        src="FUEGO%20MAX%201L.jpg"
+        alt="Fuego Max, L-Glufosinato"
+        loading="lazy"
         class="w-full h-48 object-cover rounded-md"
       >
     </div>
                         <div>
-                            <h3 class="font-bold text-lg mb-2">L-Glufosinato</h3>
-                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Isómero activo del glufosinato, mayor efectividad y seguridad." data-lang-zh="精草铵膦-活性翻倍 死草更快更彻底。">Glufosinato de amonio refinado: Doble actividad herbicida, control más rápido y completo de malezas.</p>
+                            <h3 class="font-bold text-lg mb-2">L-Glufosinato (Fuego Max)</h3>
+                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Isómero activo del glufosinato: mayor poder de corte, acción más rápida y control más completo de malezas." data-lang-zh="精草铵膦，活性更高，死草更快更彻底，对后茬安全。">Isómero activo del glufosinato: mayor poder de corte, acción más rápida y control más completo de malezas.</p>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-primary font-bold lang-text" data-lang-es="Herbicida" data-lang-zh="除草剂">Herbicida</span>
                                 <span class="text-sm text-gray-500">150g/L</span>
@@ -418,15 +429,16 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="fungicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="p-6 flex flex-col justify-between h-full">
                                              <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/PROTECPOX%201L.jpg?raw=true" 
-        alt="Epoxiconazole" 
+      <img
+        src="1PROTECPOX%201L.jpg"
+        alt="Protecpox, epoxiconazol fungicida sistémico"
+        loading="lazy"
         class="w-full h-48 object-cover rounded-md"
            >
     </div>
                         <div>
-                            <h3 class="font-bold text-lg mb-2">Epoxiconazol</h3>
-                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Fungicida triazolico de amplio espectro para enfermedades fúngicas." data-lang-zh="杀菌同时增加免疫力，叶绿叶亮，增产看得见。">Fungicida + refuerzo inmunológico: hojas verdes y brillantes, aumento de rendimiento evidente.</p>
+                            <h3 class="font-bold text-lg mb-2">Epoxiconazol (Protecpox)</h3>
+                            <p class="text-gray-600 text-sm mb-4 lang-text" data-lang-es="Fungicida triazólico sistémico de amplio espectro; hoja verde y brillante, mejora calidad y rendimiento." data-lang-zh="三唑类内吸杀菌剂，广谱防病，叶绿叶亮，提升品质与产量。">Fungicida triazólico sistémico de amplio espectro; hoja verde y brillante, mejora calidad y rendimiento.</p>
                             <div class="flex justify-between items-center mb-4">
                                 <span class="text-accent font-bold lang-text" data-lang-es="Fungicida" data-lang-zh="杀菌剂">Fungicida</span>
                                 <span class="text-sm text-gray-500">125g/L</span>
@@ -442,11 +454,9 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="insecticides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="p-6 flex flex-col justify-between h-full">
                                                  <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/L-glofosinate.jpg?raw=true" 
-        alt="Chlorantraniliprole" 
-        class="w-full h-48 object-cover rounded-md"
-      >
+      <div class="w-full h-48 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+        <span class="text-gray-400 text-sm lang-text" data-lang-es="Imagen del producto próximamente" data-lang-zh="产品图待补充">Imagen del producto próximamente</span>
+      </div>
     </div>
                         <div>
                             <h3 class="font-bold text-lg mb-2">Clorantraniliprol</h3>
@@ -466,11 +476,9 @@
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="herbicides" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="p-6 flex flex-col justify-between h-full">
                                                  <div class="mb-4">
-      <img 
-        src="https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/L-glofosinate.jpg?raw=true" 
-        alt="Flumioxazin" 
-        class="w-full h-48 object-cover rounded-md"
-      >
+      <div class="w-full h-48 rounded-md bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+        <span class="text-gray-400 text-sm lang-text" data-lang-es="Imagen del producto próximamente" data-lang-zh="产品图待补充">Imagen del producto próximamente</span>
+      </div>
     </div>
                         <div>
                             <h3 class="font-bold text-lg mb-2">Flumioxazina</h3>
@@ -521,8 +529,8 @@
                                     <i class="fa fa-phone text-white"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg mb-1 lang-text" data-lang-es="Teléfono" data-lang-zh="电话">Teléfono</h4>
-                                    <p class="text-gray-700">+86 15038661146</p>
+                                    <h4 class="font-bold text-lg mb-1 lang-text" data-lang-es="Teléfono / WeChat" data-lang-zh="电话 / 微信">Teléfono / WeChat</h4>
+                                    <p class="text-gray-700">+86 150 3866 1146</p>
                                 </div>
                             </div>
                             
@@ -535,14 +543,27 @@
                                     <p class="text-gray-700">paul@zhxcn.com</p>
                                 </div>
                             </div>
-                            
+
+                            <div class="flex items-start">
+                                <div class="bg-green-600 rounded-full p-3 mr-4">
+                                    <i class="fa fa-whatsapp text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1 lang-text" data-lang-es="WhatsApp" data-lang-zh="WhatsApp">WhatsApp</h4>
+                                    <p class="text-gray-700">+86 150 3866 1146</p>
+                                    <a href="https://wa.me/8615038661146?text=Hola%2C%20quiero%20consultar%20sobre%20sus%20productos%20fitosanitarios." target="_blank" rel="noopener" class="inline-block mt-2 bg-green-600 hover:bg-green-700 text-white text-sm font-bold py-2 px-4 rounded-md transition-all-300">
+                                        <i class="fa fa-whatsapp mr-1"></i> <span class="lang-text" data-lang-es="Chatear por WhatsApp" data-lang-zh="WhatsApp 咨询">Chatear por WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
+
                             <div class="flex items-start">
                                 <div class="bg-primary rounded-full p-3 mr-4">
                                     <i class="fa fa-building text-white"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-lg mb-1 lang-text" data-lang-es="Empresa" data-lang-zh="公司名称">Empresa</h4>
-                                    <p class="text-gray-700">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C</p>
+                                    <p class="text-gray-700">ZHONGXUN AGRICULTURAL SCIENCE PERU S.A.C.</p>
                                 </div>
                             </div>
                         </div>
@@ -593,7 +614,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-6">
-                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/eb39a4545f415e94f01d18dec229454b~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1788593278&x-signature=UAre1YKkCHloz5gpt5oLl5IGckc%3D" alt="Logo" class="h-10 w-auto mr-3">
+                        <span class="bg-primary text-white font-bold text-xl flex items-center justify-center h-10 w-10 rounded-lg mr-3">Z</span>
                         <span class="text-xl font-bold">ZHONGXUN PERU</span>
                     </div>
                     <p class="text-gray-400 mb-6 lang-text" data-lang-es="Nos dedicamos a ofrecer productos y servicios agrícolas de calidad para impulsar el desarrollo sostenible de la agricultura en Perú." data-lang-zh="我们致力于提供高品质的农业产品和服务，推动秘鲁农业可持续发展。">Nos dedicamos a ofrecer productos y servicios agrícolas de calidad para impulsar el desarrollo sostenible de la agricultura en Perú.</p>
@@ -615,7 +636,6 @@
                         <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300 lang-text" data-lang-es="Herbicidas" data-lang-zh="除草剂">Herbicidas</a></li>
                         <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300 lang-text" data-lang-es="Insecticidas" data-lang-zh="杀虫剂">Insecticidas</a></li>
                         <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300 lang-text" data-lang-es="Fungicidas" data-lang-zh="杀菌剂">Fungicidas</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-white transition-all-300 lang-text" data-lang-es="Reguladores Vegetales" data-lang-zh="植物生长调节剂">Reguladores Vegetales</a></li>
                     </ul>
                 </div>
                 
@@ -623,7 +643,7 @@
                     <h4 class="text-lg font-bold mb-6 lang-text" data-lang-es="Contacto" data-lang-zh="联系我们">Contacto</h4>
                     <ul class="space-y-3">
                         <li class="flex items-start"><i class="fa fa-user text-primary mt-1 mr-3"></i><span class="text-gray-400">PAUL</span></li>
-                        <li class="flex items-start"><i class="fa fa-phone text-primary mt-1 mr-3"></i><span class="text-gray-400">+86 15038661146</span></li>
+                        <li class="flex items-start"><i class="fa fa-whatsapp text-primary mt-1 mr-3"></i><span class="text-gray-400">WhatsApp: +86 150 3866 1146</span></li>
                         <li class="flex items-start"><i class="fa fa-envelope text-primary mt-1 mr-3"></i><span class="text-gray-400">paul@zhxcn.com</span></li>
                         <li class="flex items-start"><i class="fa fa-clock-o text-primary mt-1 mr-3"></i><span class="text-gray-400 lang-text" data-lang-es="Lun-Vie: 9:00 - 18:00" data-lang-zh="周一至周五: 9:00 - 18:00">Lun-Vie: 9:00 - 18:00</span></li>
                     </ul>
@@ -719,76 +739,90 @@
         langBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
                 const lang = btn.getAttribute('data-lang');
                 switchLanguage(lang);
+                const menu = document.getElementById('lang-menu');
+                if (menu) menu.classList.remove('open');
             });
         });
+
+        // 桌面下拉框点击展开（触屏/点击可用，hover 同时保留）
+        const langToggle = document.getElementById('lang-toggle');
+        const langMenu = document.getElementById('lang-menu');
+        if (langToggle && langMenu) {
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langMenu.classList.toggle('open');
+            });
+            document.addEventListener('click', () => langMenu.classList.remove('open'));
+        }
         
         // 产品弹窗多语言适配
         const prodData = {
             "herbicide-1": {
-                title:"2,4-D",
-                img:"https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/HERBOCOL%201L.jpg?raw=true",
+                title:{es:"2,4-D (Herbocol)", zh:"2,4-D（Herbocol）"},
+                img:"HERBOCOL%201L.jpg",
                 cat: {es: "Herbicida", zh: "除草剂"},
-                desc: {es: "Perturba el equilibrio hormonal de las malas hierbas, causando deformaciones y finalmente su muerte. Se usa ampliamente para controlar malas hierbas de hoja ancha y ciperáceas en trigo, maíz, arroz, césped de gramíneas y tierras no cultivables.", zh: "通过扰乱杂草的激素平衡，造成扭曲变形最终死亡；广泛用于小麦、玉米、水稻、禾本科草坪及非耕地防除阔叶杂草和莎草科杂草。"},
-                specs: {es: ["720g/L","Selectivo","Concentrado Soluble"], zh: ["720g/L","选择性","可溶液剂"]},
-                usage: {es: "Aplicación foliar: 20-30 ml por 20 L de agua.", zh: "茎叶喷雾20-30ml/20L水。"}
+                desc: {es: "Perturba el equilibrio hormonal de las malas hierbas, causando deformaciones y finalmente su muerte. Se usa para controlar malezas de hoja ancha y ciperáceas en cultivos de gramíneas y tierras no cultivables.", zh: "通过扰乱杂草激素平衡造成扭曲并最终死亡，用于禾本科作物田及非耕地防除阔叶杂草和莎草科杂草。"},
+                specs: {es: ["720 g/L","Selectivo","Concentrado soluble"], zh: ["720 g/L","选择性","可溶液剂"]},
+                usage: {es: "Aplicación foliar: 20-30 ml por 20 L de agua (confirmar dosis según cultivo y etiqueta SENASA).", zh: "茎叶喷雾20-30ml/20L水（具体用量按作物与SENASA标签为准）。"}
             },
             "herbicide-2": {
-                title:"Butachlor",
+                title:{es:"Butachlor", zh:"丁草胺"},
                 img:"",
                 cat: {es: "Herbicida", zh: "除草剂"},
-                desc: {es: "Herbicida para arroz.", zh: "水稻专用除草剂。"},
-                specs: {es: ["600g/L","Pre-emergencia"], zh: ["600g/L","苗前施用"]},
-                usage: {es: "Aplicar antes de la germinación.", zh: "发芽前施用。"}
+                desc: {es: "Herbicida selectivo de pre-emergencia para el cultivo de arroz, control de malezas gramíneas anuales.", zh: "水稻专用苗前选择性除草剂，防除一年生禾本科杂草。"},
+                specs: {es: ["600 g/L","Pre-emergencia"], zh: ["600 g/L","苗前施用"]},
+                usage: {es: "Aplicar antes de la germinación del cultivo, seguir la etiqueta oficial.", zh: "作物发芽前施用，以官方标签为准。"}
             },
             "herbicide-3": {
-                title:"Diquat",
-                img:"https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/1DIKILL1L.jpg?raw=true",
+                title:{es:"Diquat (Dikill)", zh:"敌草快（Dikill）"},
+                img:"1DIKILL1L.jpg",
                 cat: {es: "Herbicida", zh: "除草剂"},
-                desc: {es: "Control rápido de malas hierbas: las hojas de las malas hierbas se amarillan en 2 a 3 horas después de la aplicación. Elimina gramíneas y hoja ancha, ideal para el control dirigido entre hileras en huertos y tierras no cultivables; también se puede usar para la desecación de algunos cultivos..", zh: "快速除草，施药2-3小时杂草叶片枯黄，禾阔双除适用于果园、非耕地的定向行间除草；还可用于部分作物的摧枯干燥。"},
-                specs: {es: ["200 g/L","No selectivo"], zh: ["200克/升","非选择性"]},
-                usage: {es: " Aplicación foliar: 50-100 ml por 20 L de agua.", zh: "茎叶喷雾50-100ml/20L水"}
+                desc: {es: "Herbicida de contacto no selectivo: las hojas se amarillan en 2 a 3 horas tras la aplicación. Controla gramíneas y hoja ancha; ideal para aplicación dirigida entre hileras en huertos y tierras no cultivables, y desecación de algunos cultivos.", zh: "非选择性触杀型除草剂，施药2-3小时叶片枯黄，禾阔双除，适用于果园、非耕地定向行间除草及部分作物催枯。"},
+                specs: {es: ["200 g/L","No selectivo","Contacto"], zh: ["200 g/L","非选择性","触杀型"]},
+                usage: {es: "Aplicación foliar dirigida: 50-100 ml por 20 L de agua (confirmar dosis en etiqueta).", zh: "定向茎叶喷雾50-100ml/20L水（以标签为准）。"}
             },
             "herbicide-4": {
-                title:"Glufosinato",
-                img:"https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/1FUEGO%201L.jpg?raw=true",
+                title:{es:"Glufosinato (Fuego)", zh:"草铵膦（Fuego）"},
+                img:"1FUEGO%201L.jpg",
                 cat: {es: "Herbicida", zh: "除草剂"},
-                desc: {es: "Se absorbe rápidamente, las malas hierbas se amarillan en 3 días y el control dura de 25 a 45 días. Se utiliza para la aplicación dirigida en huertos, viñedos y tierras no cultivables; se inactiva al contacto con el suelo y no daña las raíces de los cultivos..", zh: "迅速被吸收，3天枯黄控草25-45天，用于果园、葡萄园非耕地定向除草，遇土钝化，不伤作物根系；。"},
-                specs: {es: ["200g/L","No selectivo"], zh: ["200g/L","非选择性"]},
-                usage: {es: "Aplicación foliar: 150-200 ml por 20 L de agua.", zh: "茎叶喷雾150-200ml/20L水。"}
+                desc: {es: "Se absorbe rápidamente; las malezas se amarillan en 3 días y el control dura 25-45 días. Uso dirigido en huertos, viñedos y tierras no cultivables; se inactiva al contacto con el suelo y no daña las raíces del cultivo.", zh: "吸收快，3天枯黄，控草25-45天，用于果园、葡萄园及非耕地定向除草，遇土钝化，不伤作物根系。"},
+                specs: {es: ["200 g/L","No selectivo"], zh: ["200 g/L","非选择性"]},
+                usage: {es: "Aplicación foliar dirigida: 150-200 ml por 20 L de agua (confirmar dosis en etiqueta).", zh: "定向茎叶喷雾150-200ml/20L水（以标签为准）。"}
             },
             "herbicide-5": {
-                title:"L-Glufosinato",
-                img:"https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/L-glo-1.jpg?raw=true",
+                title:{es:"L-Glufosinato (Fuego Max)", zh:"精草铵膦（Fuego Max）"},
+                img:"FUEGO%20MAX%201L.jpg",
                 cat: {es: "Herbicida", zh: "除草剂"},
-                desc: {es: "Es un producto mejorado del glufosinato de amonio. Al acumular iones de amonio, controla rápidamente las malas hierbas en huertos y tierras no cultivables; es seguro para cultivos sucesivos y el medio ambiente.", zh: "是草铵膦的升级产品，通过铵离子累积能快速防除果园及非耕地的杂草，对后茬作物和环境安全。"},
-                specs: {es: ["150g/L","Mayor efectividad"], zh: ["150g/L","效果更佳"]},
-                usage: {es: "Aplicación foliar: 50-100 ml por 20 L de agua.", zh: "茎叶喷雾 50-100ml/20L水。"}
+                desc: {es: "Isómero activo del glufosinato de amonio: mayor poder de corte, control más rápido y completo de malezas en huertos y tierras no cultivables; seguro para cultivos sucesivos y el medio ambiente.", zh: "草铵膦升级产品（L-构型活性体），死草更快更彻底，用于果园及非耕地，对后茬作物和环境安全。"},
+                specs: {es: ["150 g/L","Mayor efectividad"], zh: ["150 g/L","活性更高"]},
+                usage: {es: "Aplicación foliar dirigida: 50-100 ml por 20 L de agua (confirmar dosis en etiqueta).", zh: "定向茎叶喷雾50-100ml/20L水（以标签为准）。"}
             },
             "herbicide-6": {
-                title:"Flumioxazina",
+                title:{es:"Flumioxazina", zh:"丙炔氟草胺"},
                 img:"",
                 cat: {es: "Herbicida", zh: "除草剂"},
-                desc: {es: "Herbicida residual.", zh: "残留型除草剂。"},
-                specs: {es: ["500g/L","Pre-emergencia"], zh: ["500g/L","苗前施用"]},
-                usage: {es: "Ideal para soja y maní.", zh: "适用于大豆、花生等作物。"}
+                desc: {es: "Herbicida residual de pre-emergencia para soja, maní y otros cultivos.", zh: "残留型苗前除草剂，适用于大豆、花生等作物。"},
+                specs: {es: ["500 g/L","Pre-emergencia"], zh: ["500 g/L","苗前施用"]},
+                usage: {es: "Aplicar en pre-emergencia; seguir la etiqueta oficial.", zh: "苗前施用，以官方标签为准。"}
             },
             "fungicide-1": {
-                title:{es: "Epoxiconazol", zh: "环氧菌唑"},
-                img:"https://github.com/ZHONGXUN2025/ZHONGXUN/blob/main/1PROTECPOX%201L.jpg?raw=true",
+                title:{es:"Epoxiconazol (Protecpox)", zh:"环氧菌唑（Protecpox）"},
+                img:"1PROTECPOX%201L.jpg",
                 cat: {es: "Fungicida", zh: "杀菌剂"},
-                desc: {es: "Control eficaz de múltiples enfermedades: combate eficazmente la rizocotoniosis y fusariosis del arroz, roya, mancha foliar del banano, antracnosis de cucurbitáceas, etc. Tiene larga duración residual y mejora la calidad y rendimiento de los cultivos; la suspensión es apta para pulverización mecánica y dron agrícola.", zh: "高效防治多种病害：有效控制水稻纹枯病、稻曲病、小麦白粉病、锈病、香蕉叶斑病、瓜类炭疽病等；持效期长并且提升作物品质和产品，悬浮剂机喷、飞防均可。"},
-                specs: {es: ["125g/L","Sistémico"], zh: ["125克/升","内吸性"]},
-                usage: {es: "Aplicación foliar: 50-100 ml por 20 L de agua.", zh: "茎叶喷雾10-20ml/20L水。"}
+                desc: {es: "Fungicida triazólico sistémico de amplio espectro para múltiples enfermedades fúngicas; prolongada residualidad y mejora calidad y rendimiento. La suspensión sirve para pulverización mecánica y dron.", zh: "三唑类内吸广谱杀菌剂，防治多种真菌病害，持效期长，提升品质与产量，悬浮剂机喷、飞防均可。"},
+                specs: {es: ["125 g/L","Sistémico"], zh: ["125 g/L","内吸性"]},
+                usage: {es: "Aplicación foliar (confirmar dosis y cultivo en etiqueta SENASA).", zh: "茎叶喷雾（用量与适用作物以SENASA标签为准）。"}
             },
             "insecticide-1": {
-                title:"Clorantraniliprol",
+                title:{es:"Clorantraniliprol", zh:"氯虫苯甲酰胺"},
                 img:"",
                 cat: {es: "Insecticida", zh: "杀虫剂"},
-                desc: {es: "Contra lepidópteros.", zh: "防治鳞翅目害虫。"},
-                specs: {es: ["500 g/L","Ecológico"], zh: ["500克/升","环保型"]},
-                usage: {es: "Bajo impacto en benéficos.", zh: "对有益生物影响小。"}
+                desc: {es: "Insecticida contra lepidópteros y otras plagas, con bajo impacto sobre organismos benéficos.", zh: "防治鳞翅目等多种害虫，对有益生物影响小。"},
+                specs: {es: ["200 g/L*","Bajo impacto en benéficos"], zh: ["200 g/L*","对有益生物影响小"]},
+                usage: {es: "* Concentración por confirmar con ficha técnica; dosis según etiqueta oficial.", zh: "*浓度以技术资料确认为准，用量按官方标签。"}
             }
         };
         
@@ -804,7 +838,7 @@
             if (!currentProdId || !prodData[currentProdId]) return;
             
             const prod = prodData[currentProdId];
-            modalTitle.textContent = prod.title;
+            modalTitle.textContent = typeof prod.title === 'object' ? prod.title[currentLang] : prod.title;
             modalCat.textContent = prod.cat[currentLang];
             modalDesc.textContent = prod.desc[currentLang];
             modalSpecs.innerHTML = prod.specs[currentLang].map(s => `<li>${s}</li>`).join('');
@@ -858,8 +892,8 @@
                 const modalSpecs = document.getElementById('modal-specifications');
                 const modalUsage = document.getElementById('modal-usage');
                 
-                modalTitle.textContent = d.title;
-                modalImg.src = d.img || 'https://via.placeholder.com/400x300?text=Producto';
+                modalTitle.textContent = typeof d.title === 'object' ? d.title[currentLang] : d.title;
+                modalImg.src = d.img || 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%23eef2ee%22/%3E%3Ctext x=%22200%22 y=%22155%22 text-anchor=%22middle%22 fill=%2399aaaa font-family=%22Arial%22%3EProducto%3C/text%3E%3C/svg%3E';
                 modalCat.textContent = d.cat[currentLang];
                 modalDesc.textContent = d.desc[currentLang];
                 modalSpecs.innerHTML = d.specs[currentLang].map(s=>`<li>${s}</li>`).join('');
@@ -885,14 +919,17 @@
         });
         upBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
-        // Form
+        // Form: sin backend, abre WhatsApp con el mensaje prellenado
         const form = document.getElementById('contact-form');
         form.addEventListener('submit',(e)=>{
             e.preventDefault();
-            const alertMsg = currentLang === 'es' 
-                ? 'Mensaje enviado correctamente. Nos comunicaremos pronto.' 
-                : '留言发送成功，我们将尽快与您联系。';
-            alert(alertMsg);
+            const nombre = document.getElementById('name').value.trim();
+            const correo = document.getElementById('email').value.trim();
+            const asunto = document.getElementById('subject').value.trim();
+            const mensaje = document.getElementById('message').value.trim();
+            const texto = `Nombre: ${nombre}%0ACorreo: ${correo}%0AAsunto: ${asunto}%0AMensaje: ${mensaje}`;
+            window.open(`https://wa.me/8615038661146?text=${encodeURIComponent('Consulta ZHONGXUN PERU')}%0A${texto}`, '_blank');
+            if (currentLang !== 'es') alert('已为您打开 WhatsApp，发送后我们会尽快回复。');
             form.reset();
         });
     </script>
